@@ -1,5 +1,42 @@
-.qestion-as-asked{}
-.list-qestions{}
-.list-qestion-item{}
-.topik-qestion{}
-.questions{}
+.qestion-as-asked{
+    font-family: "Inter Tight", sans-serif;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.4);
+    margin-bottom: 32px;
+}
+.list-qestions{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 64px;
+    row-gap: 58px;
+    justify-content: space-around;
+}
+.list-qestion-item{
+
+    width: calc(50% - 32px);
+    /* Дві колонки */
+    padding: 16px;
+    background: #222;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+.topik-qestion{
+    padding-bottom: 26px;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+}
+.questions{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+}
