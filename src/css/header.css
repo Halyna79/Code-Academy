@@ -43,7 +43,6 @@ button.header-button:hover {
   color: #fafafa;
 }
 
-/* Меню */
 .nav-item {
   position: relative;
 }
@@ -70,7 +69,6 @@ ul.submenu {
   color: #ed3b44;
 }
 
-/* Бургер-меню */
 .burger {
   width: 21px;
   height: 8.17px;
@@ -106,7 +104,6 @@ ul.submenu {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Адаптивність */
 @media (max-width: 767px) {
   .nav-block {
     display: none;

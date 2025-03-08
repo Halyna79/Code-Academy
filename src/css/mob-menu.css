@@ -47,7 +47,10 @@
   cursor: pointer;
 }
 
-.header-button {
+.mobile-box .header-button {
+  display: block;
+  position: relative;
+  bottom: 50px;
   background-color: #ed3b44;
   border: none;
   border-radius: 60px;
@@ -59,10 +62,9 @@
   width: 163px;
   height: 55px;
   transition: background 0.3s;
-  display: block;
 }
 
-.header-button:hover {
+.mobile-box .header-button:hover {
   background-color: #e0373f;
 }
 
