@@ -19,6 +19,19 @@
   background-color: var(--cards);
 }
 
+.benefit-icon-box {
+  border-radius: 10px;
+  width: fit-content;
+  padding: 12px;
+  background-color: var(--button-text);
+}
+
+.benefit-icon {
+  display: block;
+  stroke: var(--main-text);
+  fill: var(--button-text);
+}
+
 .benefit-title {
   margin-top: 64px;
   text-transform: none;
@@ -40,6 +53,11 @@
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--main-text);
+  transition: color 200ms linear;
+}
+
+.benefits-cta:hover {
+  color: #c8c8c8;
 }
 
 @media (min-width: 768px) {
