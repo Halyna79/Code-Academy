@@ -22,7 +22,7 @@ function renderReviews(cards) {
 		<li class="swiper-slide review-card">
 		  <img src="${avatar_url}" alt="${author}"/>
 			<div class="review-info">
-			  <h3>${author}</h3>
+			  <h4>${author}</h4>
 				<p>${review}</p>
 			</div>
 		</li>
@@ -56,9 +56,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 		const swiper = new Swiper('.swiper', {
 			direction: 'horizontal',
 			loop: false,
+			spaceBetween: 16,
 			navigation: {
 				nextEl: '.swiper-button-next',
-				prevEl: 'swiper-button-prev',
+				prevEl: '.swiper-button-prev',
 			},
 			keyboard: {
 				enabled: true,
