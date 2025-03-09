@@ -18,12 +18,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  padding-top: 64px;
 }
 
 @media (min-width: 768px) {
   .about-me-section {
     gap: 64px;
+    padding-top: 64px;
   }
 }
 @media (min-width: 1440px) {
@@ -129,9 +129,9 @@
 
 /* === Accordion === */
 
-.ac-header {
-  /* margin-bottom: 32px; */
-}
+/* .ac-header {
+  margin-bottom: 32px;
+} */
 
 .ac-trigger {
   width: 100%;
