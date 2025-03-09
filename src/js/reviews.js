@@ -64,27 +64,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: 'swiper-button-prev',
-
-			spaceBetween: 16,
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
+			},
+				spaceBetween: 16,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
         
-			},
-			keyboard: {
-				enabled: true,
-				onlyInViewport: true,
-			},
-			mousewheel: {
-				invert: true,
-			},
-			resizeObserver: true,
-			slidesPerView: 1,
-			breakpoints: {
-				768: { slidesPerView: 2 },
-				1440: { slidesPerView: 4 },
-			},
-		});
+				},
+				keyboard: {
+					enabled: true,
+					onlyInViewport: true,
+				},
+				mousewheel: {
+					invert: true,
+				},
+				resizeObserver: true,
+				slidesPerView: 1,
+				breakpoints: {
+					768: { slidesPerView: 2 },
+					1440: { slidesPerView: 4 },
+				},
+			});
 
 		function updateButtonSlider() {
 			btnPrev.toggleAttribute('disabled', swiper.isBeginning);
