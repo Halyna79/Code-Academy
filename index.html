@@ -11,7 +11,7 @@
     <script type="module" crossorigin src="/Code-Academy/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Code-Academy/assets/vendor-BYUds9X1.js">
     <link rel="stylesheet" crossorigin href="/Code-Academy/assets/vendor-CNsKelwJ.css">
-    <link rel="stylesheet" crossorigin href="/Code-Academy/assets/index-Cs01n3QW.css">
+    <link rel="stylesheet" crossorigin href="/Code-Academy/assets/index-BuI15ahN.css">
   </head>
   <body>
     <header class="header">
@@ -151,7 +151,7 @@
       </p>
       <picture>
         <source
-          srcset="/Code-Academy/assets/about-me-photo-CaS6Nihy.webp 1x, /img/about-me-photo-2x.webp 2x"
+          srcset="/Code-Academy/assets/about-me-photo-CaS6Nihy.webp 1x, /Code-Academy/assets/about-me-photo-2x-DuvuHADr.webp 2x"
           media="(min-width: 1440px)"
         />
         <source
@@ -172,9 +172,14 @@
     </div>
 
     <ul class="about-me-info-list accordion-container">
-      <li class="about-me-info-item active ac">
+      <li class="about-me-info-item ac">
         <h2 class="ac-header">
-          <button type="button" class="ac-trigger">ABOUT ME</button>
+          <button type="button" class="ac-trigger">
+            ABOUT ME
+            <svg class="accordion-close-icon">
+              <use href="/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg"></use>
+            </svg>
+          </button>
         </h2>
         <div class="ac-panel">
           <ul class="ac-text about-me-list">
@@ -207,9 +212,14 @@
         </div>
       </li>
 
-      <li class="about-me-info-item active ac">
+      <li class="about-me-info-item ac">
         <h2 class="ac-header">
-          <button type="button" class="ac-trigger">ROLE</button>
+          <button type="button" class="ac-trigger">
+            ROLE
+            <svg class="accordion-close-icon">
+              <use href="/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg"></use>
+            </svg>
+          </button>
         </h2>
         <div class="ac-panel">
           <ul class="ac-text about-me-list">
@@ -220,9 +230,14 @@
         </div>
       </li>
 
-      <li class="about-me-info-item active ac">
+      <li class="about-me-info-item ac">
         <h2 class="ac-header">
-          <button type="button" class="ac-trigger">EDUCATION</button>
+          <button type="button" class="ac-trigger">
+            EDUCATION
+            <svg class="accordion-close-icon">
+              <use href="/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg"></use>
+            </svg>
+          </button>
         </h2>
         <div class="ac-panel">
           <ul class="ac-text about-me-list">
@@ -246,14 +261,21 @@
       </li>
     </ul>
 
-    <ul class="about-me-list-skills">
-      <li class="about-me-item-skill"><p>HTML/CSS</p></li>
-      <li class="about-me-item-skill"><p>JavaScript</p></li>
-      <li class="about-me-item-skill"><p>React</p></li>
-      <li class="about-me-item-skill"><p>Node.js</p></li>
-      <li class="about-me-item-skill"><p>React Native</p></li>
-      <li class="about-me-item-skill"><p>Soft skills</p></li>
-    </ul>
+    <div class="swiper about-me-swiper">
+      <ul class="swiper-wrapper about-me-list-skills">
+        <li class="swiper-slide about-me-item-skill"><p>HTML/CSS</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>JavaScript</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>React</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>Node.js</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>React Native</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>Soft skills</p></li>
+      </ul>
+      <div class="swiper-button-next about-me-button">
+        <svg class="about-me-swiper-btn">
+          <use href="/Code-Academy/assets/icons-BXQt0PIq.svg#icon-arrow-rightsvg"></use>
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
 
