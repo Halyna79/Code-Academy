@@ -1,8 +1,10 @@
 import axios from 'axios';
+import iziToast from "izitoast";
 
 const form = document.querySelector(".footer-form")
+
 const btnClose = document.querySelector(".btn-close-res");
-    const menu = document.querySelector(".modal-window");
+const menu = document.querySelector(".modal-window");
 
 
 const baseUrl = "https://portfolio-js.b.goit.study/api";
@@ -16,16 +18,15 @@ form.addEventListener('submit', async (e) => {
 
         const data = JSON.stringify({email,comment})
         
+  
         const url = baseUrl + endPoint
         
+      
         const response = await axios.post(url,data,{
             headers: {
                 "accept": "application/json",
                 "Content-Type": "application/json"}
         })
-
-       
-        alert(response.data.title);
         
         menu.classList.add('show');
 
@@ -44,7 +45,15 @@ form.addEventListener('submit', async (e) => {
         })
 
     }catch(e){
-        alert(response)
+        
+        iziToast.show({
+            backgroundColor: 'RGBA(237, 59, 68, 1)',
+            messageColor: `rgba(255, 255, 255, 1)`,
+            close: `false`,
+            position: "topRight",
+            message: `Error. Please, try again later`
+      });
+
     }    
     
     
@@ -52,6 +61,8 @@ form.addEventListener('submit', async (e) => {
 
     
     
-  
-    
-    
+
+
+
+
+
