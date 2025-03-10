@@ -1,3 +1,11 @@
+footer-bg {
+    background-image: url("/img/footer/black-drapes.png");
+    width: 728px;
+    height: 679px;
+    background-position: right 290px;
+  }
+
+
 
 .footer-first-group {
     display: flex;
@@ -117,6 +125,11 @@ font-size: 16px;
 }
 
 @media only screen and (min-width: 1280px) {
+    .footer {
+        padding: 80px 196px;
+    }
+
+
 
     .footer-first-group {
         width: 542px;
