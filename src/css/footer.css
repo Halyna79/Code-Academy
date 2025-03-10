@@ -1,5 +1,5 @@
 
-footer-bg {
+.footer-bg {
     background-image: url('/img/hero/black-drapes.png');
     background-image: image-set(
       url('/img/hero/black-drapes.png') 1x,
