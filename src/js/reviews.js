@@ -22,11 +22,7 @@ function renderReviews(cards) {
 		<li class="swiper-slide review-card">
 		  <img src="${avatar_url}" alt="${author}"/>
 			<div class="review-info">
-      
-			  <h3>${author}</h3>
-
 			  <h4>${author}</h4>
-
 				<p>${review}</p>
 			</div>
 		</li>
