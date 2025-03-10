@@ -19,10 +19,12 @@
   padding-bottom: 281px;
 }
 
+
 h1 span {
   display: block;
   padding-top: 4px;
 }
+
 
 .list {
   display: flex;
