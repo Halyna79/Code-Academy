@@ -41,7 +41,7 @@ form.addEventListener('submit', async (e) => {
         })
 
     }catch(e){
-        alert(response)
+        alert("Error. Please, try again later")
     }    
     
     
