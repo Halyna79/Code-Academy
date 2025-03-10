@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             const isOpen = question.style.display === "block";
             if (isOpen) {
                 question.style.display = "none";
-                icon.setAttribute("href", "/img/icons.svg#icon-accordion-closesvg");
+                icon.setAttribute("href", "/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg");
             } else {
                 question.style.display = "block";
-                icon.setAttribute("href", "/img/icons.svg#icon-accordion-opensvg");
+                icon.setAttribute("href", "/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-opensvg");
             }
         });
     });
