@@ -18,12 +18,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  padding-top: 64px;
 }
 
 @media (min-width: 768px) {
   .about-me-section {
     gap: 64px;
-    padding-top: 64px;
   }
 }
 @media (min-width: 1440px) {
@@ -103,20 +103,26 @@
 .about-me-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 10px;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .about-me-list {
-    gap: 16px;
     margin-bottom: 32px;
   }
 }
+
+#ac-panel-0 .about-me-list {
+  gap: 32px;
+}
+@media (min-width: 768px) {
+  #ac-panel-0 .about-me-list {
+    gap: 16px;
+  }
+}
 @media (min-width: 1440px) {
-  .about-me-list {
+  #ac-panel-0 .about-me-list {
     gap: 32px;
-    margin-left: 696px;
-    margin-right: 68px;
   }
 }
 
@@ -129,14 +135,20 @@
 
 /* === Accordion === */
 
-/* .ac-header {
-  margin-bottom: 32px;
-} */
+.accordion-container .ac {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  margin-bottom: 0;
+}
 
-.ac-trigger {
-  width: 100%;
+.accordion-container button::after {
+  display: none;
+}
+
+.ac .ac-header .ac-trigger {
+  font-family: 'Inter Tight', sans-serif;
   height: 36px;
-  text-align: left;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -146,12 +158,43 @@
   padding: 0;
   background-color: transparent;
   border: none;
-  cursor: pointer;
+  position: relative;
+}
+.ac .ac-header .ac-trigger button::after {
+  content: '';
+  display: inline-block;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: url('../img/icons.svg#icon-accordion-opensvg');
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
 }
 
 @media (min-width: 768px) {
-  .ac-trigger {
+  .ac .ac-header .ac-trigger {
     height: 40px;
+  }
+}
+
+.accordion-container .ac .ac-panel .ac-text {
+  padding: 0;
+  padding-top: 12px;
+}
+@media (min-width: 768px) {
+  .accordion-container .ac .ac-panel .ac-text {
+    padding-top: 8px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .accordion-container .ac .ac-panel .ac-text {
+    margin-left: 696px;
+    margin-right: 68px;
   }
 }
 
@@ -164,7 +207,7 @@
   display: block;
 } */
 
-/* === skills === */
+/* !=== skills === */
 
 .about-me-list-skills {
   display: flex;
