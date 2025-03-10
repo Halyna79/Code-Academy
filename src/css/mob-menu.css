@@ -33,7 +33,7 @@
   font-size: 16px;
   color: #fafafa;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease-in-out;
 }
 
 .mob-nav li a:hover {
@@ -46,6 +46,17 @@
   right: 22px;
   cursor: pointer;
 }
+.close svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #fafafa;
+  stroke-width: 2;
+}
+.close:hover svg {
+  stroke: #ed3b44;
+  transition: stroke 0.3s ease-in-out;
+}
 
 .mobile-box .header-button {
   display: block;
@@ -54,13 +65,13 @@
   background-color: #ed3b44;
   border: none;
   border-radius: 60px;
-  padding: 18px 24px;
+  padding: 14px 31px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: #fafafa;
   cursor: pointer;
-  width: 163px;
-  height: 55px;
+  width: 164px;
+  height: 45px;
   transition: background 0.3s;
 }
 
