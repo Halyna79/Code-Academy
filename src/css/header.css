@@ -1,6 +1,11 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: transparent;
   padding: 32px 0;
+  z-index: 1000;
 }
 
 .container-inner {
@@ -38,31 +43,49 @@ button.header-button:hover {
   font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
   letter-spacing: -0.02em;
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: 500;
   color: #fafafa;
 }
-
+.nav-item a {
+  text-decoration: underline;
+}
+.nav-item ul a {
+  text-decoration: none;
+}
 .nav-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  gap: 7px;
 }
 
 ul.submenu {
   position: absolute;
-  width: 67px;
-  left: 0;
+  min-width: max-content;
   top: 100%;
-  padding-top: 10px;
+  left: 50%;
+  padding-top: 13.5px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(-10px);
+  transform: translate(-50%, -10px);
+  text-align: center;
+  padding: 8px 12px;
+}
+
+.nav-block {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .nav-item.active ul.submenu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translate(-50%, 0);
 }
 
 .nav-item ul a:hover {
