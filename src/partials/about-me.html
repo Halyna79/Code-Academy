@@ -40,9 +40,14 @@
     </div>
 
     <ul class="about-me-info-list accordion-container">
-      <li class="about-me-info-item is-active ac">
+      <li class="about-me-info-item ac">
         <h2 class="ac-header">
-          <button type="button" class="ac-trigger">ABOUT ME</button>
+          <button type="button" class="ac-trigger">
+            ABOUT ME
+            <svg class="accordion-close-icon">
+              <use href="/img/icons.svg#icon-accordion-closesvg"></use>
+            </svg>
+          </button>
         </h2>
         <div class="ac-panel">
           <ul class="ac-text about-me-list">
@@ -75,9 +80,14 @@
         </div>
       </li>
 
-      <li class="about-me-info-item active ac">
+      <li class="about-me-info-item ac">
         <h2 class="ac-header">
-          <button type="button" class="ac-trigger">ROLE</button>
+          <button type="button" class="ac-trigger">
+            ROLE
+            <svg class="accordion-close-icon">
+              <use href="/img/icons.svg#icon-accordion-closesvg"></use>
+            </svg>
+          </button>
         </h2>
         <div class="ac-panel">
           <ul class="ac-text about-me-list">
@@ -88,9 +98,14 @@
         </div>
       </li>
 
-      <li class="about-me-info-item active ac">
+      <li class="about-me-info-item ac">
         <h2 class="ac-header">
-          <button type="button" class="ac-trigger">EDUCATION</button>
+          <button type="button" class="ac-trigger">
+            EDUCATION
+            <svg class="accordion-close-icon">
+              <use href="/img/icons.svg#icon-accordion-closesvg"></use>
+            </svg>
+          </button>
         </h2>
         <div class="ac-panel">
           <ul class="ac-text about-me-list">
@@ -114,13 +129,20 @@
       </li>
     </ul>
 
-    <ul class="about-me-list-skills">
-      <li class="about-me-item-skill"><p>HTML/CSS</p></li>
-      <li class="about-me-item-skill"><p>JavaScript</p></li>
-      <li class="about-me-item-skill"><p>React</p></li>
-      <li class="about-me-item-skill"><p>Node.js</p></li>
-      <li class="about-me-item-skill"><p>React Native</p></li>
-      <li class="about-me-item-skill"><p>Soft skills</p></li>
-    </ul>
+    <div class="swiper about-me-swiper">
+      <ul class="swiper-wrapper about-me-list-skills">
+        <li class="swiper-slide about-me-item-skill"><p>HTML/CSS</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>JavaScript</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>React</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>Node.js</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>React Native</p></li>
+        <li class="swiper-slide about-me-item-skill"><p>Soft skills</p></li>
+      </ul>
+      <div class="swiper-button-next about-me-button">
+        <svg class="about-me-swiper-btn">
+          <use href="img/icons.svg#icon-arrow-rightsvg"></use>
+        </svg>
+      </div>
+    </div>
   </div>
 </section>
