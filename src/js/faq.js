@@ -3,7 +3,7 @@ import "accordion-js/dist/accordion.min.css";
 
 document.addEventListener("DOMContentLoaded", () => {
     new Accordion(".list-qestions", {
-        duration: 500,
+        duration: 500, 
         showMultiple: true,
     });
 
@@ -18,13 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
             const isOpen = question.style.display === "block";
-
             if (isOpen) {
                 question.style.display = "none";
-                icon.setAttribute("href", `${window.location.origin}/img/icons.svg#icon-accordion-closesvg`);
+                icon.setAttribute("href", "/img/icons.svg#icon-accordion-closesvg");
             } else {
                 question.style.display = "block";
-                icon.setAttribute("href", `${window.location.origin}/img/icons.svg#icon-accordion-opensvg`);
+                icon.setAttribute("href", "/img/icons.svg#icon-accordion-opensvg");
             }
         });
     });
