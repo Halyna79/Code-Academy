@@ -1,4 +1,17 @@
 
+footer-bg {
+    background-image: url('/img/hero/black-drapes.png');
+    background-image: image-set(
+      url('/img/hero/black-drapes.png') 1x,
+      url('/img/hero/black-drapes-2x.png') 2x
+    );
+    width: 728px;
+    height: 679px;
+    background-size: no-repeat;
+    background-position: right top;
+  }
+
+
 .footer-first-group {
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +130,10 @@ font-size: 16px;
 }
 
 @media only screen and (min-width: 1280px) {
+    .footer {
+        padding: 80px 196px;
+    }
+
 
     .footer-first-group {
         width: 542px;
@@ -125,7 +142,6 @@ font-size: 16px;
         column-gap: 20px;
         row-gap: 10px;   
     }
-
 
  
     .footer-form {
@@ -136,7 +152,6 @@ font-size: 16px;
     .footer-form-item {
         width: 390px;
     }
-
 
 
 }
