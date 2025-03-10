@@ -17,10 +17,10 @@ form.addEventListener('submit', async (e) => {
         const comment = e.currentTarget.elements.comments.value.trim();
 
         const data = JSON.stringify({email,comment})
-        
+
   
         const url = baseUrl + endPoint
-        
+
       
         const response = await axios.post(url,data,{
             headers: {
@@ -45,6 +45,7 @@ form.addEventListener('submit', async (e) => {
         })
 
     }catch(e){
+
         
         iziToast.show({
             backgroundColor: 'RGBA(237, 59, 68, 1)',
@@ -55,8 +56,7 @@ form.addEventListener('submit', async (e) => {
       });
 
     }    
-    
-    
+   
 });
 
     

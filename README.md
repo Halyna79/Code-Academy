@@ -1,4 +1,4 @@
-# HarvestJoy
+# Code-Academy
 Цей проект було створено командою Code-Academy
 
 ## Встановлення

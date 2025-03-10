@@ -39,6 +39,7 @@
 
 .benefit-desc {
   margin-top: 8px;
+  color: #FAFAFA99;
 }
 
 .benefits-cta {
@@ -53,11 +54,12 @@
   font-weight: 500;
   letter-spacing: -0.02em;
   color: var(--main-text);
-  transition: color 200ms linear;
+  transition: border-color 250ms linear;
 }
 
-.benefits-cta:hover {
-  color: #c8c8c8;
+.benefits-cta:hover,
+.benefits-cta:focus {
+  border-color: var(--main-text);
 }
 
 @media (min-width: 768px) {
