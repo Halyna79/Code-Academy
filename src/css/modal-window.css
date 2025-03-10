@@ -1,4 +1,5 @@
 
+
 .modal-window {
     display: none;
     position: fixed;
@@ -30,12 +31,13 @@
     border-radius: 20px;
     transform: scale(0.8);
     transition: transform 0.3s ease;
-}
+
 
 .btn-close-res {
     position: absolute;
     right: 25.5px;
     top: 25.5px;
+
     width: 22px;
     height: 22px;
     background-color: transparent;
@@ -43,7 +45,7 @@
 
 .icon-close {
     stroke: #fff;
-}
+
 
 .res-title {
 font-weight: 600;
@@ -54,6 +56,9 @@ text-align: center;
 padding-bottom: 16px;
 }
 
+
+
+
 .res-mess {
 font-weight: 500;
 font-size: 16px;
@@ -62,6 +67,7 @@ letter-spacing: -0.02em;
 text-align: center;
 color: rgba(250, 250, 250, 0.6);
 }
+
 
 @media only screen and (min-width: 768px) {
 
@@ -78,3 +84,4 @@ height: 246px;
 
 
 }
+
