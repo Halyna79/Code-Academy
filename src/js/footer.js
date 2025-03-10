@@ -23,8 +23,6 @@ form.addEventListener('submit', async (e) => {
                 "Content-Type": "application/json"}
         })
 
-       
-        alert(response.data.title);
         
         menu.classList.add('show');
 
