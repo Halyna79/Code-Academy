@@ -7,7 +7,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
 }
 
 .h1-hero {
@@ -29,11 +28,12 @@
 .list {
   display: flex;
   gap: 4px;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-list {
   display: flex;
-  align-items: flex-end;
   gap: 4px;
 }
 
@@ -44,21 +44,31 @@
 
 .social {
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
+  border-radius: 50%;
   padding: 10px 12px;
-  /* width: 37px;
-  height: 37px; */
+  flex-shrink: 0;
+  width: 37px;
+  height: 37px;
 
   font-size: 14px;
+}
+
+.social:nth-child(2) {
+  padding: 10px;
+}
+.social:nth-child(3) {
+  padding: 10px 11px;
+}
+.social:nth-child(4) {
+  padding: 10px 8px;
 }
 
 .email {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   padding: 10px 12px;
-  /* width: 178px;
-  height: 37px; */
-
+  width: 178px;
+  height: 37px;
   font-size: 14px;
 }
 
@@ -93,6 +103,16 @@
     width: 55px;
     height: 55px;
     font-size: 16px;
+  }
+
+  .social:nth-child(2) {
+    padding: 18px 17px;
+  }
+  .social:nth-child(3) {
+    padding: 18px;
+  }
+  .social:nth-child(4) {
+    padding: 18px 16px;
   }
 
   .email {

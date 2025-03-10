@@ -3,11 +3,6 @@
     margin-bottom: 32px;
 }
 
-
-.list-qestions{
-    display: flex;
-    flex-wrap: wrap;
-}
 .list-qestion-item{
     padding: 20px 0 20px 0px;
     box-sizing: border-box;
@@ -22,10 +17,6 @@
 
 .topik-qestion{
     text-transform: none;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
 }
 
 .topic-button{
@@ -33,8 +24,7 @@
 }
 
 .questions{
-    font-weight: 500;
-    font-size: 16px;
+    display: none;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.6);
@@ -71,6 +61,10 @@
     }
 }
 @media only screen and (min-width: 1200px) {
+    .list-qestions{
+        display: flex;
+        flex-wrap: wrap;
+    }
     .list-qestion-item:nth-child(even) {
         width: 50%;
         /* Дві колонки */
