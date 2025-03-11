@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
             question.classList.toggle("open");
             const isOpen = question.classList.contains("open");
             if (isOpen) {
-                icon.setAttribute("href", "/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg");
-            } else {
                 icon.setAttribute("href", "/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-opensvg");
+            } else {
+                icon.setAttribute("href", "/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg");
             }
         });
     });
