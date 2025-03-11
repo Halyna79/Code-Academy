@@ -36,6 +36,7 @@ const reviewsList = document.querySelector('.reviews-list');
 const notFoundMes = document.querySelector('.reviews-error');
 const btnPrev = document.querySelector('.swiper-button-prev');
 const btnNext = document.querySelector('.swiper-button-next');
+const swiperConteiner = document.querySelector('.reviews-can-see');
 
 let isError = false;
 
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     reviewsList.innerHTML = renderReviews(result);
 
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper(swiperConteiner, {
       direction: 'horizontal',
       loop: false,
       spaceBetween: 16,

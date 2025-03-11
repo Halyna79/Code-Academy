@@ -75,8 +75,7 @@
 .reviews-button:hover {
   background-color: #242528;
 }
-.swiper-button-prev[disabled],
-.swiper-button-next[disabled] {
+.reviews-button.swiper-button-disabled {
   outline: 1px solid rgba(250, 250, 250, 0.2);
   color: rgba(250, 250, 250, 0.2);
   cursor: not-allowed;
