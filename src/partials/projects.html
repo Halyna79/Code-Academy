@@ -1,25 +1,62 @@
 <section id="projects" class="projects">
-  <div class="left">
-    <div class="tags">
-      <a href="" target="_blank">#react</a>
-      <a href="" target="_blank">#js</a>
-      <a href="" target="_blank">#node js</a>
-      <a href="" target="_blank">#git</a>
+  <div class="container">
+    <div class="wrap">
+      <p class="projects-title">PROJECTS</p>
+      <div class="projects-container">
+        <div class="left">
+          <div class="tags">
+            <a href="" target="_blank">#react</a>
+            <a href="" target="_blank">#js</a>
+            <a href="" target="_blank">#node js</a>
+            <a href="" target="_blank">#git</a>
+          </div>
+          <h1 class="header-project-section">
+            Programming Across Borders: Ideas, Technologies, Innovations
+          </h1>
+          <button class="btn">See project</button>
+        </div>
+        <div class="right">
+          <picture class="picture">
+            <source
+              srcset="
+                ../img/projects/book-app-project.webp  1x,
+                /img/projects/book-app-project-2x.webp 2x
+              "
+            />
+            <source
+              srcset="
+                ../img/projects/book-app-project-tab.webp  1x,
+                /img/projects/book-app-project-tab-2x.webp 2x
+              "
+            />
+            <source
+              srcset="
+                ../img/projects/book-app-project-mob.webp  1x,
+                /img/projects/book-app-project-mob-2x.webp 2x
+              "
+            />
+            <img
+              class="image-projects"
+              src="../img/projects/book-app-project.webp "
+              alt="book-app-project"
+            />
+          </picture>
+        </div>
+      </div>
+      <div>
+        <div class="icon-arrow">
+          <button class="button-swipe active" tabindex="0">
+            <svg stroke="currentColor" fill="none">
+              <use href="img/icons.svg#icon-arrow-leftsvg"></use>
+            </svg>
+          </button>
+          <button class="button-swipe active" tabindex="0">
+            <svg stroke="currentColor" fill="none">
+              <use href="img/icons.svg#icon-arrow-rightsvg"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
-    <h1 class="header">
-      Programming Across Borders: Ideas, Technologies, Innovations
-    </h1>
-    <button class="btn">See project</button>
   </div>
-  <div class="right">
-    <img
-      src="/src/img/projects/book-app-project.webp"
-      alt="book-app-project"
-      width="614"
-      height="385"
-    />
-  </div>
-  <svg class="icon-arrow" width="32" height="32">
-    <use href="src/img/icons.svg#icon-arrow-leftsvg"></use>
-  </svg>
 </section>
