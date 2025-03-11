@@ -2,44 +2,37 @@ document.addEventListener('DOMContentLoaded', function () {
   const menuButton = document.querySelector('.nav-menu');
   const navItem = document.querySelector('.nav-item');
   const submenu = document.getElementById('submenu');
-
-  if (menuButton && navItem && submenu) {
-    menuButton.addEventListener('click', function (event) {
-      event.preventDefault();
-      const isExpanded = navItem.classList.toggle('active');
-      menuButton.setAttribute('aria-expanded', isExpanded);
-
-      if (isExpanded) {
-        submenu.removeAttribute('hidden');
-      } else {
-        submenu.setAttribute('hidden', 'true');
-      }
-    });
-  }
-
-  document.querySelectorAll('.submenu a').forEach(anchor => {
-    anchor.addEventListener('click', function () {
-      navItem.classList.remove('active');
-      submenu.setAttribute('hidden', 'true');
-      menuButton.setAttribute('aria-expanded', 'false');
-    });
-  });
-
   const scrollToFooterBtn = document.getElementById('scroll-to-footer');
   const footerSection = document.getElementById('footer');
 
-  if (scrollToFooterBtn) {
-    scrollToFooterBtn.addEventListener('click', function (event) {
-      event.preventDefault();
+  menuButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    const isExpanded = navItem.classList.toggle('active');
+    menuButton.setAttribute('aria-expanded', isExpanded);
+    submenu.hidden = !isExpanded;
+  });
 
-      if (footerSection) {
-        window.scrollTo({
-          top: footerSection.offsetTop,
-          behavior: 'smooth',
-        });
-      } else {
-        console.error('Footer section not found!');
+  document.addEventListener('click', function (event) {
+    if (!navItem.contains(event.target) && !menuButton.contains(event.target)) {
+      navItem.classList.remove('active');
+      submenu.hidden = true;
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.querySelectorAll('.submenu a').forEach(anchor => {
+    anchor.addEventListener('click', function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
       }
+
+      navItem.classList.remove('active');
+      submenu.hidden = true;
+      menuButton.setAttribute('aria-expanded', 'false');
     });
-  }
+  });
 });
