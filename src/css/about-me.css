@@ -130,6 +130,9 @@
   height: 18px;
 }
 
+@media (min-width: 768px) {
+}
+
 /* === media === */
 
 @media (min-width: 768px) {
@@ -177,91 +180,43 @@
 }
 
 /* === skills === */
-.about-me-swiper {
+
+.about-me-list-skills {
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 260px;
   overflow: hidden;
-  width: 100%;
-  height: 130px;
-  padding-top: 1px;
-  padding-bottom: 1px;
 }
-/* === these 2 classes are here just in case untill the problem will be solved  */
-
-/* .swiper-wrapper {
-display: flex;
-} */
-
-/* .swiper-slide {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: 130px !important;
-} */
-
-/* ==== */
-
-.about-me-skills-list {
-  display: flex;
-  padding: 0;
+@media (min-width: 768px) {
+  .about-me-list-skills {
+    max-width: 600px;
+  }
+}
+@media (min-width: 1440px) {
+  .about-me-list-skills {
+    max-width: 1200px;
+  }
 }
 
-.about-me-skill-item {
+.about-me-item-skill {
   width: 130px;
   height: 130px;
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
   display: flex;
-
   align-items: center;
   justify-content: center;
-  text-align: center;
-  overflow: hidden;
-  font-size: 14px;
-  line-height: 1;
   flex-shrink: 0;
 }
-
-/* !====== COMMENT*/
-/* бажано щоб на активний елемент  працював класс .about-me-skill-item.active
-замість  працюючего зараз .swiper-slide-active
-Цей клас може викликати зміни в інших секціях де є swiper */
-
-/* .about-me-skill-item.active {
-  background-color: #ed3b44 !important;
-  border: none;
-} */
-
-.swiper-slide-active {
-  background-color: #ed3b44;
-  border: none;
-}
-/* ======END of comment */
-
-.about-me-swiper-button {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-}
-
-.about-me-swiper-btn-svg {
-  width: 100%;
-  height: 100%;
-}
-/* 
 @media (min-width: 768px) {
-  .about-me-skills-list {
-    max-width: 600px;
-  }
-  .about-me-skill-item {
+  .about-me-item-skill {
     width: 200px;
     height: 200px;
     font-size: 20px;
   }
 }
-@media (min-width: 1440px) {
-  .about-me-skills-list {
-    max-width: 1200px;
-  }
-} */
+
+.about-me-item-skill:first-child {
+  background-color: #ed3b44;
+  border: none;
+}
