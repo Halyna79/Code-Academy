@@ -1,7 +1,10 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-// import Swiper from 'swiper/bundle';
-// import 'swiper/css';
+
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordion = new Accordion('.about-me-info-list', {
@@ -40,24 +43,45 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //! === swiper ===
-// const aboutMeSwiper = new Swiper('.swiper', {
-//   direction: 'horizontal',
-//   loop: true,
-//   spaceBetween: 0,
-//   navigation: {
-//     nextEl: 'swiper-button-next',
-//   },
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: true,
-//   },
-//   mousewheel: {
-//     invert: true,
-//   },
-//   resizeObserver: true,
-//   slidesPerView: 2,
-//   breakpoints: {
-//     768: { slidesPerView: 3 },
-//     1440: { slidesPerView: 6 },
-//   },
-// });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.about-me-swiper', {
+    modules: [Navigation],
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+    },
+    resizeObserver: true,
+    slidesPerView: 2,
+    breakpoints: {
+      768: { slidesPerView: 3 },
+      1440: { slidesPerView: 6 },
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    mousewheel: {
+      invert: true,
+    },
+    on: {
+      slideChangeTransitionEnd: function () {
+        document
+          .querySelectorAll('.about-me-skill-item')
+          .forEach(item => item.classList.remove('active'));
+
+        let activeSlides = document.querySelectorAll(
+          '.swiper-slide-active .about-me-skill-item'
+        );
+
+        activeSlides.forEach(slider => slider.classList.add('active'));
+      },
+    },
+  });
+
+  setTimeout(() => {
+    document
+      .querySelectorAll('.swiper-slide-active .about-me-skill-item')
+      .forEach(item => item.classList.add('active'));
+  }, 100);
+});
