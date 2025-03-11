@@ -6,10 +6,22 @@
           <a href="#">
             <picture>
               <source
-                srcset="/img/header/profile-logo@2x.webp"
-                media="(min-resolution: 192dpi)"
+                srcset="
+                  /img/header/profile-logo.webp    1x,
+                  /img/header/profile-logo-2x.webp 2x
+                "
               />
-              <img src="/img/header/profile-logo.webp" alt="logo" />
+
+              <img
+                srcset="
+                  /img/header/profile-logo.webp    1x,
+                  /img/header/profile-logo-2x.webp 2x
+                "
+                src="/img/header/profile-logo.webp"
+                alt="logo"
+                width="80"
+                loading="lazy"
+              />
             </picture>
             <span>jefferson*</span>
           </a>
@@ -19,7 +31,7 @@
             <li class="nav-item">
               <a href="#" class="nav-menu">Menu</a>
               <ul class="submenu">
-                <li><a href="#about">About me</a></li>
+                <li><a href="#about-me">About me</a></li>
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#faq">FAQ</a></li>
