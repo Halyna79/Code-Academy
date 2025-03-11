@@ -72,7 +72,8 @@
   width: 24px;
   height: 24px;
 }
-.reviews-button:hover {
+.reviews-button:hover,
+.reviews-button:focus {
   background-color: #242528;
 }
 .reviews-button.swiper-button-disabled {
