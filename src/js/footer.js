@@ -31,6 +31,8 @@ form.addEventListener('submit', async (e) => {
 
         form.reset()
         body.classList.add('disable-scroll');
+        
+        
         menu.addEventListener("click", e=> {
                   
             if (e.target !== e.currentTarget) {
@@ -38,15 +40,20 @@ form.addEventListener('submit', async (e) => {
          }
 
         menu.classList.remove('show');
+        body.classList.remove('disable-scroll');
         })
 
          
         
-        document.addEventListener('keydown', e => {
-            if (e.key === "Escape") menu.classList.remove('show');
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                body.classList.remove('disable-scroll');
+                menu.classList.remove('show');
+            }
         }); 
 
         btnClose.addEventListener ('click', (e) => {
+            body.classList.remove('disable-scroll');
             menu.classList.remove('show');
         })
 
