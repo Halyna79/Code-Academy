@@ -130,6 +130,9 @@
   height: 18px;
 }
 
+@media (min-width: 768px) {
+}
+
 /* === media === */
 
 @media (min-width: 768px) {
