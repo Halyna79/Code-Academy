@@ -105,6 +105,7 @@ h1 span {
 
   .hero-container {
     padding-top: 300px;
+    padding-inline: 32px;
   }
 
   .hero-title {
@@ -158,6 +159,10 @@ h1 span {
       url('../img/hero/red-drapes.png') 1x,
       url('../img/hero/red-drapes-2x.png') 2x
     );
+  }
+
+  .hero-container {
+    padding-inline: 178px;
   }
 
   /* .hero-title {
