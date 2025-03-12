@@ -1,18 +1,20 @@
 <section class="mob-menu">
-  <div class="mobile-box">
-    <div class="block-navigation">
+  <div class="mobile-box" role="dialog" aria-modal="true" aria-hidden="true">
+    <nav class="block-navigation">
       <ul class="mob-nav">
-        <li><a href="#about-me">About-me</a></li>
+        <li><a href="#about-me">About me</a></li>
         <li><a href="#benefits">Benefits</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a class="close" href="#">
-        <svg width="28" height="28">
-          <use href="/img/icons.svg#icon-x"></use>
-        </svg>
-      </a>
-    </div>
-    <button class="header-button" id="mobile-order">Order the project</button>
+    </nav>
+    <button class="close" role="button" aria-label="Close mobile menu">
+      <svg width="28" height="28" fill="currentColor">
+        <use href="/img/icons.svg#icon-x"></use>
+      </svg>
+    </button>
+    <a href="#footer" class="header-button" aria-label="Go to footer"
+      >Order the project</a
+    >
   </div>
 </section>
