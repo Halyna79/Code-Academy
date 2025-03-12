@@ -1,4 +1,3 @@
-
 .modal-window {
     display: none;
     position: fixed;
@@ -20,17 +19,20 @@
     visibility: visible;
 }
 
-
 .res-window {
+
     width: 343px;
     height: 276px;
     background-color: #1C1D20;
     position: relative;
-    padding: 64px 32px;
+    top: 138px;
+    margin: 138px 16px;
     border: 1px solid rgba(250, 250, 250, 0.1);
     border-radius: 20px;
     transform: scale(0.8);
     transition: transform 0.3s ease;
+    padding: 64px 32px;
+    
 }
 
 .btn-close-res {
@@ -42,22 +44,19 @@
     background-color: transparent;
 }
 
-
-
-
 .icon-close {
     stroke: #fff;
 }
 
 .res-title {
+padding-bottom: 16px;
 font-weight: 600;
 font-size: 20px;
 line-height: 150%;
 letter-spacing: -0.02em;
 text-align: center;
-padding-bottom: 16px;
-}
 
+}
 
 .res-mess {
 font-weight: 500;
@@ -82,6 +81,9 @@ height: 246px;
     height: 24px;
 }
 
+.res-window {
+    top: 195px;
+}
 
 }
 

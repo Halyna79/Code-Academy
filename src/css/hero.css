@@ -15,8 +15,8 @@
   line-height: 100%;
   letter-spacing: -0.03em;
 
-  padding-top: 281px;
-  padding-bottom: 281px;
+  padding-top: 169px;
+  padding-bottom: 212px;
 }
 
 
@@ -97,8 +97,8 @@ h1 span {
 
   .hero-title {
     font-size: 90px;
-    padding-top: 300px;
-    padding-bottom: 274px;
+    padding-top: 188px;
+    padding-bottom: 187px;
   }
 
   .list {
@@ -147,7 +147,7 @@ h1 span {
   }
 
   .hero-title {
-    padding-bottom: 330px;
+    padding-bottom: 243px;
     padding-left: 178px;
   }
 }
