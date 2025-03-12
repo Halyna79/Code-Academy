@@ -5,7 +5,7 @@ const form = document.querySelector(".footer-form")
 
 const btnClose = document.querySelector(".btn-close-res");
 const menu = document.querySelector(".modal-window");
-const body = document.querySelector("body");
+const body = document.body;
 
 const baseUrl = "https://portfolio-js.b.goit.study/api";
 const endPoint = "/requests";
@@ -17,7 +17,6 @@ form.addEventListener('submit', async (e) => {
         const comment = e.currentTarget.elements.comments.value.trim();
 
         const data = JSON.stringify({email,comment})
-
   
         const url = baseUrl + endPoint
 
@@ -31,21 +30,14 @@ form.addEventListener('submit', async (e) => {
         menu.classList.add('show');
 
         form.reset()
-
-        disabledScroll ()
-
-        /*document.querySelector(".res-window").addEventListener("click", (e) => {
-            console.log(e.target);
-        })*/
-
+        body.classList.add('disable-scroll');
         menu.addEventListener("click", e=> {
                   
             if (e.target !== e.currentTarget) {
             return;
          }
 
-         console.log(e.target)
-          menu.classList.remove('show');
+        menu.classList.remove('show');
         })
 
          
@@ -74,9 +66,7 @@ form.addEventListener('submit', async (e) => {
 });
 
     
-function disabledScroll () {
-    body.classList.add(".disable-scroll")
-}
+
 
 
 

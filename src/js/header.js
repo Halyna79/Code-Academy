@@ -22,14 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('.submenu a').forEach(anchor => {
     anchor.addEventListener('click', function (event) {
-      event.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-
-      if (targetSection) {
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-      }
-
       navItem.classList.remove('active');
       submenu.hidden = true;
       menuButton.setAttribute('aria-expanded', 'false');
