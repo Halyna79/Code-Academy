@@ -1,11 +1,13 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 
+const projectSwiper = document.querySelector('.project-swiper')
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(projectSwiper, {
   speed: 400,
   spaceBetween: 100,
 });
+
 const rightBtn = document.querySelector('.next');
 const leftBtn = document.querySelector('.back');
 
