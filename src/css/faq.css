@@ -29,7 +29,7 @@
 
 .questions.open {
     padding-top: 16px;
-    max-height: 100px;
+    max-height: 150px;
     opacity: 1;
 }
 .button-accordion {
