@@ -13,10 +13,6 @@
                 "
               />
               <img
-                srcset="
-                  /img/header/profile-logo.webp    1x,
-                  /img/header/profile-logo-2x.webp 2x
-                "
                 src="/img/header/profile-logo.webp"
                 alt="Jefferson company logo"
                 width="80"
@@ -29,7 +25,9 @@
         <nav class="nav-block" role="navigation">
           <ul class="nav">
             <li class="nav-item">
-              <a href="#" class="nav-menu" aria-expanded="false">Menu</a>
+              <a href="#" class="nav-menu" aria-expanded="false" tabindex="0"
+                >Menu</a
+              >
               <ul class="submenu" id="submenu" hidden>
                 <li><a href="#about-me">About me</a></li>
                 <li><a href="#benefits">Benefits</a></li>
@@ -40,10 +38,13 @@
           </ul>
         </nav>
         <div class="button-item">
-          <button class="header-button" id="scroll-to-footer">
-            Order the project
-          </button>
-          <button class="burger" aria-label="Open navigation" role="button">
+          <a href="#footer" class="header-button">Order the project</a>
+          <button
+            class="burger"
+            aria-label="Open navigation"
+            role="button"
+            tabindex="0"
+          >
             <span></span>
             <span></span>
           </button>

@@ -25,7 +25,9 @@
   color: #fafafa;
 }
 
-button.header-button {
+a.header-button {
+  display: inline-block;
+  text-align: center;
   width: 163px;
   height: 55px;
   background-color: #ed3b44;
@@ -37,9 +39,10 @@ button.header-button {
   color: #fafafa;
   font-size: 16px;
   letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
-button.header-button:hover {
+a.header-button:hover {
   background-color: #e0373f;
 }
 
@@ -146,6 +149,9 @@ ul.submenu {
   }
   .burger {
     display: block;
+  }
+  .header-button {
+    display: none !important;
   }
 }
 
