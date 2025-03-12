@@ -46,15 +46,14 @@
 
   width: 282px;
   height: 162px;
+}
+.covers-inner-list.covers-start-animation {
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-/* .covers-inner-list.covers-start-animation {
-
-} */
 
 @keyframes marqueeLine {
   from {
