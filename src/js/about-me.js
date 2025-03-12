@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
       icon.setAttribute(
         'href',
         state === 'open'
-          ? '/img/icons.svg#icon-accordion-opensvg'
-          : '/img/icons.svg#icon-accordion-closesvg'
+          ? '/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-opensvg'
+          : '/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg'
       );
     }
   }
@@ -43,17 +43,22 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //! === swiper ===
-
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.about-me-swiper', {
     modules: [Navigation],
     loop: true,
+    loopAddBlankSlides: true,
+    // loopAdditionalSlides: 10,
     navigation: {
       nextEl: '.swiper-button-next',
     },
-    resizeObserver: true,
-    slidesPerView: 2,
+    // resizeObserver: true,
+    // observer: true,
+    // observeParents: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     breakpoints: {
+      320: { slidesPerView: 2 },
       768: { slidesPerView: 3 },
       1440: { slidesPerView: 6 },
     },
@@ -65,23 +70,29 @@ document.addEventListener('DOMContentLoaded', function () {
       invert: true,
     },
     on: {
+      init: function () {
+        let firstActiveSlide = document.querySelector(
+          '.about-me-swiper .swiper-slide.swiper-slide-active'
+        );
+        if (firstActiveSlide) {
+          firstActiveSlide.classList.add('isActive');
+        }
+      },
+
       slideChangeTransitionEnd: function () {
         document
-          .querySelectorAll('.about-me-skill-item')
-          .forEach(item => item.classList.remove('active'));
+          .querySelectorAll('.about-me-swiper .swiper-slide')
+          .forEach(function (slide) {
+            slide.classList.remove('isActive');
+          });
 
-        let activeSlides = document.querySelectorAll(
-          '.swiper-slide-active .about-me-skill-item'
+        let activeSlide = document.querySelector(
+          '.about-me-swiper .swiper-slide.swiper-slide-active'
         );
-
-        activeSlides.forEach(slider => slider.classList.add('active'));
+        if (activeSlide) {
+          activeSlide.classList.add('isActive');
+        }
       },
     },
   });
-
-  setTimeout(() => {
-    document
-      .querySelectorAll('.swiper-slide-active .about-me-skill-item')
-      .forEach(item => item.classList.add('active'));
-  }, 100);
 });
