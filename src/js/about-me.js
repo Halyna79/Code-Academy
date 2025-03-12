@@ -1,7 +1,8 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-// import Swiper from 'swiper/bundle';
-// import 'swiper/css';
+
+import Swiper from 'swiper';
+import 'swiper/css';
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordion = new Accordion('.about-me-info-list', {
@@ -28,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
       icon.setAttribute(
         'href',
         state === 'open'
-          ? '/img/icons.svg#icon-accordion-opensvg'
-          : '/img/icons.svg#icon-accordion-closesvg'
+          ? '/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-opensvg'
+          : '/Code-Academy/assets/icons-BXQt0PIq.svg#icon-accordion-closesvg'
       );
     }
   }
@@ -40,24 +41,53 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //! === swiper ===
-// const aboutMeSwiper = new Swiper('.swiper', {
-//   direction: 'horizontal',
-//   loop: true,
-//   spaceBetween: 0,
-//   navigation: {
-//     nextEl: 'swiper-button-next',
-//   },
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: true,
-//   },
-//   mousewheel: {
-//     invert: true,
-//   },
-//   resizeObserver: true,
-//   slidesPerView: 2,
-//   breakpoints: {
-//     768: { slidesPerView: 3 },
-//     1440: { slidesPerView: 6 },
-//   },
-// });
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.about-me-swiper', {
+    direction: 'horizontal',
+    loop: true,
+    loopAddBlankSlides: true,
+    loopAdditionalSlides: 10,
+    navigation: {
+      nextEl: '.about-me-swiper-button',
+    },
+    slidesPerView: 1,
+    breakpoints: {
+      320: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      1440: { slidesPerView: 6 },
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
+    mousewheel: {
+      invert: true,
+    },
+
+    on: {
+      init: function () {
+        let firstActiveSlide = document.querySelector(
+          '.about-me-swiper .swiper-slide.swiper-slide-active'
+        );
+        if (firstActiveSlide) {
+          firstActiveSlide.classList.add('isActive');
+        }
+      },
+
+      slideChangeTransitionEnd: function () {
+        document
+          .querySelectorAll('.about-me-swiper .swiper-slide')
+          .forEach(function (slide) {
+            slide.classList.remove('isActive');
+          });
+
+        let activeSlide = document.querySelector(
+          '.about-me-swiper .swiper-slide.swiper-slide-active'
+        );
+        if (activeSlide) {
+          activeSlide.classList.add('isActive');
+        }
+      },
+    },
+  });
+});
