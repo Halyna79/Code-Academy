@@ -47,7 +47,7 @@
   align-items: flex-start;
 }
 
-h1 {
+.header-project-section{
   text-transform: none;
   font-weight: 500;
   font-size: 24px;
@@ -131,6 +131,7 @@ h1 {
 .active svg {
   width: 24px;
   height: 24px;
+  stroke: #fafafa;
 }
 
 .button-swipe.active {
@@ -213,7 +214,7 @@ h1 {
     align-items: flex-start;
   }
 
-  h1 {
+  .header-project-section {
     text-transform: none;
     font-weight: 500;
     font-size: 44px;
@@ -339,7 +340,7 @@ h1 {
     font-weight: bold;
   }
 
-  h1 {
+  .header-project-section {
     text-transform: none;
     font-weight: 500;
     font-size: 44px;
