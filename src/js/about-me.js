@@ -3,8 +3,6 @@ import 'accordion-js/dist/accordion.min.css';
 
 import Swiper from 'swiper';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordion = new Accordion('.about-me-info-list', {
@@ -45,18 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
 //! === swiper ===
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.about-me-swiper', {
-    modules: [Navigation],
+    direction: 'horizontal',
     loop: true,
     loopAddBlankSlides: true,
-    // loopAdditionalSlides: 10,
+    loopAdditionalSlides: 10,
     navigation: {
-      nextEl: '.swiper-button-next',
+      nextEl: '.about-me-swiper-button',
     },
-    // resizeObserver: true,
-    // observer: true,
-    // observeParents: true,
     slidesPerView: 1,
-    slidesPerGroup: 1,
     breakpoints: {
       320: { slidesPerView: 2 },
       768: { slidesPerView: 3 },
@@ -69,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mousewheel: {
       invert: true,
     },
+
     on: {
       init: function () {
         let firstActiveSlide = document.querySelector(
