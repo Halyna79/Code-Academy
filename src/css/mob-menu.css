@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   background: url(/img/mob-menu/Glass-effect.png) center/cover no-repeat;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,6 +12,12 @@
   padding-top: 303px;
   z-index: 1000;
   transform: translateX(-100%);
+  visibility: hidden;
+}
+
+.menu-open .mobile-box {
+  transform: translateX(0);
+  visibility: visible;
 }
 
 .mob-nav {
@@ -24,10 +30,6 @@
   margin-bottom: 12px;
 }
 
-.mob-nav li:last-child {
-  margin-bottom: 289px;
-}
-
 .mob-nav li a {
   font-weight: 500;
   font-size: 16px;
@@ -36,31 +38,14 @@
   transition: color 0.3s ease-in-out;
 }
 
-.mob-nav li a:hover {
+.mob-nav li a:hover,
+.mob-nav li a:focus {
   color: #ed3b44;
 }
 
-.close {
-  position: absolute;
-  top: 33px;
-  right: 22px;
-  cursor: pointer;
-}
-.close svg {
-  width: 28px;
-  height: 28px;
-  fill: none;
-  stroke: #fafafa;
-  stroke-width: 2;
-}
-.close:hover svg {
-  stroke: #ed3b44;
-  transition: stroke 0.3s ease-in-out;
-}
-
 .mobile-box .header-button {
-  display: block;
-  position: relative;
+  display: block !important;
+  position: absolute;
   bottom: 50px;
   background-color: #ed3b44;
   border: none;
@@ -73,17 +58,58 @@
   width: 164px;
   height: 45px;
   transition: background 0.3s;
+  text-align: center;
+  text-decoration: none;
 }
 
-.mobile-box .header-button:hover {
+.mobile-box .header-button:hover,
+.mobile-box .header-button:focus {
   background-color: #e0373f;
 }
 
-.menu-open .mobile-box {
-  transform: translateX(0);
+.close {
+  position: absolute;
+  top: 33px;
+  right: 22px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fafafa;
+  transition: color 0.3s ease-in-out;
+  border: none;
 }
-body.no-scroll {
-  overflow: hidden;
+
+.close svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.close:hover,
+.close:focus {
+  color: #ed3b44;
+}
+
+.close:hover svg,
+.close:focus svg {
+  stroke: #ed3b44;
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid #ed3b44;
+  outline-offset: 2px;
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .header .header-button {
+    display: none !important;
+  }
+  .mobile-box .header-button {
+    display: block !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -91,6 +117,7 @@ body.no-scroll {
     display: none;
   }
 }
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .mobile-box {
     background: url(/img/mob-menu/Glass-effect-2x.png) center/cover no-repeat;
