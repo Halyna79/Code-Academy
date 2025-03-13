@@ -14,7 +14,4 @@ const projectSwiper = new Swiper('.projects-swiper', {
     onlyInViewport: true,
   },
 
-  mousewheel: {
-    invert: true,
-  },
 });
