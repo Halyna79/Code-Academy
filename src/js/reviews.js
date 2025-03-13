@@ -66,9 +66,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         enabled: true,
         onlyInViewport: true,
       },
-      mousewheel: {
-        invert: true,
-      },
       resizeObserver: true,
       slidesPerView: 1,
       breakpoints: {
