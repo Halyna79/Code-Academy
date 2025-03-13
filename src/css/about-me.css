@@ -183,7 +183,7 @@
   display: inline-block;
 }
 
-.about-me-section .about-me-skill-item:first-child {
+.swiper-slide-active.about-me-skill-item {
   background-color: #ed3b44;
   border: none;
 }
