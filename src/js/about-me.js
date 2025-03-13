@@ -40,25 +40,26 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-//! === swiper ===
+// === swiper ===
 document.addEventListener('DOMContentLoaded', function () {
-  // const swiperWrapper = document.querySelector('.about-me-skills-list');
-  // const originalSlides = Array.from(swiperWrapper.children);
-  // const minSlidesNeeded = 30;
+  const swiperWrapper = document.querySelector('.about-me-skills-list');
+  const originalSlides = Array.from(swiperWrapper.children);
+  const minSlidesNeeded = 30;
 
-  // while (swiperWrapper.children.length < minSlidesNeeded) {
-  //   originalSlides.forEach(slide => {
-  //     const clone = slide.cloneNode(true);
-  //     swiperWrapper.appendChild(clone);
-  //   });
-  // }
+  while (swiperWrapper.children.length < minSlidesNeeded) {
+    originalSlides.forEach(slide => {
+      const clone = slide.cloneNode(true);
+      swiperWrapper.appendChild(clone);
+    });
+  }
 
   const swiper = new Swiper('.about-me-swiper', {
     loop: true,
-    // loopAdditionalSlides: 10,
+    loopAdditionalSlides: 6,
     navigation: {
       nextEl: '.about-me-swiper-button',
     },
+    allowSlidePrev: false,
     spaceBetween: 0,
     slidesPerView: 2,
     slidesPerGroup: 1,
@@ -73,31 +74,5 @@ document.addEventListener('DOMContentLoaded', function () {
     mousewheel: {
       invert: true,
     },
-
-    // on: {
-    //   init: function () {
-    //     let firstActiveSlide = document.querySelector(
-    //       '.about-me-swiper .swiper-slide.swiper-slide-active'
-    //     );
-    //     if (firstActiveSlide) {
-    //       firstActiveSlide.classList.add('isActive');
-    //     }
-    //   },
-
-    //   slideChangeTransitionEnd: function () {
-    //     document
-    //       .querySelectorAll('.about-me-swiper .swiper-slide')
-    //       .forEach(function (slide) {
-    //         slide.classList.remove('isActive');
-    //       });
-
-    //     let activeSlide = document.querySelector(
-    //       '.about-me-swiper .swiper-slide.swiper-slide-active'
-    //     );
-    //     if (activeSlide) {
-    //       activeSlide.classList.add('isActive');
-    //     }
-    //   },
-    // },
   });
 });
