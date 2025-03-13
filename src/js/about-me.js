@@ -3,8 +3,6 @@ import 'accordion-js/dist/accordion.min.css';
 
 import Swiper from 'swiper';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordion = new Accordion('.about-me-info-list', {
@@ -44,22 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //! === swiper ===
 document.addEventListener('DOMContentLoaded', function () {
-  const swiperWrapper = document.querySelector('.about-me-skills-list');
-  const originalSlides = Array.from(swiperWrapper.children);
-  const minSlidesNeeded = 30;
+  // const swiperWrapper = document.querySelector('.about-me-skills-list');
+  // const originalSlides = Array.from(swiperWrapper.children);
+  // const minSlidesNeeded = 30;
 
-  while (swiperWrapper.children.length < minSlidesNeeded) {
-    originalSlides.forEach(slide => {
-      const clone = slide.cloneNode(true);
-      swiperWrapper.appendChild(clone);
-    });
-  }
+  // while (swiperWrapper.children.length < minSlidesNeeded) {
+  //   originalSlides.forEach(slide => {
+  //     const clone = slide.cloneNode(true);
+  //     swiperWrapper.appendChild(clone);
+  //   });
+  // }
 
   const swiper = new Swiper('.about-me-swiper', {
-    modules: [Navigation],
-    direction: 'horizontal',
     loop: true,
-    loopAdditionalSlides: 10,
+    // loopAdditionalSlides: 10,
     navigation: {
       nextEl: '.about-me-swiper-button',
     },
@@ -78,30 +74,30 @@ document.addEventListener('DOMContentLoaded', function () {
       invert: true,
     },
 
-    on: {
-      init: function () {
-        let firstActiveSlide = document.querySelector(
-          '.about-me-swiper .swiper-slide.swiper-slide-active'
-        );
-        if (firstActiveSlide) {
-          firstActiveSlide.classList.add('isActive');
-        }
-      },
+    // on: {
+    //   init: function () {
+    //     let firstActiveSlide = document.querySelector(
+    //       '.about-me-swiper .swiper-slide.swiper-slide-active'
+    //     );
+    //     if (firstActiveSlide) {
+    //       firstActiveSlide.classList.add('isActive');
+    //     }
+    //   },
 
-      slideChangeTransitionEnd: function () {
-        document
-          .querySelectorAll('.about-me-swiper .swiper-slide')
-          .forEach(function (slide) {
-            slide.classList.remove('isActive');
-          });
+    //   slideChangeTransitionEnd: function () {
+    //     document
+    //       .querySelectorAll('.about-me-swiper .swiper-slide')
+    //       .forEach(function (slide) {
+    //         slide.classList.remove('isActive');
+    //       });
 
-        let activeSlide = document.querySelector(
-          '.about-me-swiper .swiper-slide.swiper-slide-active'
-        );
-        if (activeSlide) {
-          activeSlide.classList.add('isActive');
-        }
-      },
-    },
+    //     let activeSlide = document.querySelector(
+    //       '.about-me-swiper .swiper-slide.swiper-slide-active'
+    //     );
+    //     if (activeSlide) {
+    //       activeSlide.classList.add('isActive');
+    //     }
+    //   },
+    // },
   });
 });
