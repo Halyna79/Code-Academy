@@ -96,13 +96,6 @@
   stroke: #ed3b44;
 }
 
-a:focus,
-button:focus {
-  outline: 2px solid #ed3b44;
-  outline-offset: 2px;
-  border-radius: 5px;
-}
-
 @media (max-width: 767px) {
   .header .header-button {
     display: none !important;
