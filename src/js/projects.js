@@ -1,36 +1,20 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
 
-const projectSwiper = document.querySelector('.project-swiper')
-
-const swiper = new Swiper(projectSwiper, {
+const projectSwiper = new Swiper('.projects-swiper', {
   speed: 400,
   spaceBetween: 100,
+  navigation: {
+    prevEl: '.projects-swiper-prev',
+    nextEl: '.projects-swiper-next',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  mousewheel: {
+    invert: true,
+  },
 });
-
-const rightBtn = document.querySelector('.next');
-const leftBtn = document.querySelector('.back');
-
-rightBtn.addEventListener('click',() => {
-    swiper.slideNext()
-    if (swiper.isEnd) {
-       rightBtn.setAttribute('disabled', 'disabled')
-    }
-    if (!swiper.isBeginning) {
-        leftBtn.removeAttribute('disabled')
-    }
-}
-)
-leftBtn.addEventListener('click',() => {
-    swiper.slidePrev()
-    if (!swiper.isEnd) {
-        rightBtn.removeAttribute('disabled')
-    }
-    if (swiper.isBeginning) {
-       leftBtn.setAttribute('disabled', 'disabled')
-    }
-}
-) 
-if (swiper.isBeginning) {
-       leftBtn.setAttribute('disabled', 'disabled')
-    }
