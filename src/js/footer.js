@@ -11,10 +11,28 @@ const baseUrl = "https://portfolio-js.b.goit.study/api";
 const endPoint = "/requests";
 
 form.addEventListener('submit', async (e) => {
-    e.preventDefault()
-    try{
-        const email = e.currentTarget.elements.email.value.trim();
-        const comment = e.currentTarget.elements.comments.value.trim();
+  e.preventDefault();
+  const email = e.currentTarget.elements.email.value.trim();
+  const comment = e.currentTarget.elements.comments.value.trim();
+  if (!email || !comment) {
+    iziToast.show({
+      backgroundColor: 'rgba(237, 59, 68, 1)',
+      messageColor: 'rgba(255, 255, 255, 1)',
+      position: 'topRight',
+      message: 'Please fill in all fields!'
+    });
+    return;
+  }
+  const emailPattern = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailPattern.test(email)) {
+    iziToast.show({
+      backgroundColor: 'rgba(237, 59, 68, 1)',
+      messageColor: 'rgba(255, 255, 255, 1)',
+      position: 'topRight',
+      message: 'Please enter a valid email!'
+    });
+    return;
+  }
 
         const data = JSON.stringify({email,comment})
   
@@ -51,7 +69,8 @@ form.addEventListener('submit', async (e) => {
                 menu.classList.remove('show');
             }
         }); 
-
+        
+    try {
         btnClose.addEventListener ('click', (e) => {
             body.classList.remove('disable-scroll');
             menu.classList.remove('show');
@@ -71,11 +90,3 @@ form.addEventListener('submit', async (e) => {
     }    
    
 });
-
-    
-
-
-
-
-
-
