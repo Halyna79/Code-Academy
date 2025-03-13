@@ -42,17 +42,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //! === swiper ===
 document.addEventListener('DOMContentLoaded', function () {
+  // const swiperWrapper = document.querySelector('.about-me-skills-list');
+  // const originalSlides = Array.from(swiperWrapper.children);
+  // const minSlidesNeeded = 30;
+
+  // while (swiperWrapper.children.length < minSlidesNeeded) {
+  //   originalSlides.forEach(slide => {
+  //     const clone = slide.cloneNode(true);
+  //     swiperWrapper.appendChild(clone);
+  //   });
+  // }
+
   const swiper = new Swiper('.about-me-swiper', {
-    direction: 'horizontal',
     loop: true,
-    loopAddBlankSlides: true,
-    loopAdditionalSlides: 10,
+    // loopAdditionalSlides: 10,
     navigation: {
       nextEl: '.about-me-swiper-button',
     },
-    slidesPerView: 1,
+    spaceBetween: 0,
+    slidesPerView: 2,
+    slidesPerGroup: 1,
     breakpoints: {
-      320: { slidesPerView: 2 },
       768: { slidesPerView: 3 },
       1440: { slidesPerView: 6 },
     },
@@ -64,30 +74,30 @@ document.addEventListener('DOMContentLoaded', function () {
       invert: true,
     },
 
-    on: {
-      init: function () {
-        let firstActiveSlide = document.querySelector(
-          '.about-me-swiper .swiper-slide.swiper-slide-active'
-        );
-        if (firstActiveSlide) {
-          firstActiveSlide.classList.add('isActive');
-        }
-      },
+    // on: {
+    //   init: function () {
+    //     let firstActiveSlide = document.querySelector(
+    //       '.about-me-swiper .swiper-slide.swiper-slide-active'
+    //     );
+    //     if (firstActiveSlide) {
+    //       firstActiveSlide.classList.add('isActive');
+    //     }
+    //   },
 
-      slideChangeTransitionEnd: function () {
-        document
-          .querySelectorAll('.about-me-swiper .swiper-slide')
-          .forEach(function (slide) {
-            slide.classList.remove('isActive');
-          });
+    //   slideChangeTransitionEnd: function () {
+    //     document
+    //       .querySelectorAll('.about-me-swiper .swiper-slide')
+    //       .forEach(function (slide) {
+    //         slide.classList.remove('isActive');
+    //       });
 
-        let activeSlide = document.querySelector(
-          '.about-me-swiper .swiper-slide.swiper-slide-active'
-        );
-        if (activeSlide) {
-          activeSlide.classList.add('isActive');
-        }
-      },
-    },
+    //     let activeSlide = document.querySelector(
+    //       '.about-me-swiper .swiper-slide.swiper-slide-active'
+    //     );
+    //     if (activeSlide) {
+    //       activeSlide.classList.add('isActive');
+    //     }
+    //   },
+    // },
   });
 });
