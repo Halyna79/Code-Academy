@@ -1,6 +1,18 @@
 # Code-Academy
 Цей проект було створено командою Code-Academy
 
+# Учасники команди:
+- [Галина Бандурка] (https://github.com/Halyna79) 
+- [Ілля Ляшко] (https://github.com/Illia-L)
+- [Володимир Ступник ] (https://github.com/Volodymyr-Stupnyk)
+- [Софія Беседіна] (https://github.com/BesedinaSofia)
+- [Олександр Милютін] (https://github.com/OleksandrMyliutin)
+- [Світлана Малиновська] (https://github.com/Lana-Malynowska)
+- [Іванна Гінько] (https://github.com/Ivanna-Ginko)
+- [Єва Савранська] (https://github.com/Eva-069)
+- [Марина Голікова] (https://github.com/Marishenka)
+- [Вікторія Рожкова] (https://github.com/stilistica)
+
 ## Встановлення
 1. Клонуйте репозиторій:
      git clone https://github.com/username/repository.git
